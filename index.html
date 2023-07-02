@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sorting Visualization</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body class="" style="background-color:black">
+    <h1 style="color: white" class="mt-5">Sorting Visualizer</h1>
+    <div class="container">
+        <div id="array-container">
+            <div class="row" style="height: 60vh" id="array"></div>
+        </div>
+        <div class="row sorts mb-5">
+            <input class="col btn btn-secondary" type="button" onclick="SelectionSort()" value="Selection Sort">
+            <input class="col btn btn-secondary" type="button" onclick="BubbleSort()" value="Bubble Sort">
+            <input class="col btn btn-secondary" type="button" onclick="InsertionSort()" value="Insertion Sort">
+            <input class="col btn btn-secondary" type="button" onclick="MergeSort()" value="Merge Sort">
+            <input class="col btn btn-secondary" type="button" onclick="QuickSort()" value="Quick Sort">
+        </div>
+        <div class="vars row" style="color: white">
+            <button class="col-4 btn btn-info mb-5" onclick="reset()">Generate New
+                Array</button>
+            <div class="col-8 range mb-5">
+                <div class="row">
+                    <div class="col-6 slide"><label for="barsِ">Array Size</label><input class="form-range" id="bars"
+                            type="range" name="bars" oninput="setup()" onchange="setup()" min="1" max="35" value="10">
+                    </div>
+                    <div class="col-6 slide"><label for="delay">Speed</label><input class="form-range" id="delay"
+                            type="range" name="delay" oninput="setup()" onchange="setup()" min="0" max="1000"
+                            value="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
